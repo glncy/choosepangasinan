@@ -1,0 +1,184 @@
+/*---------------------------------------GENERAL-----------------------------------*/
+*
+{
+	margin: 0;
+}
+
+body
+{
+	background-image: url("images/bg.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+}
+@font-face
+{
+	font-family: Font;
+	src: url("font2.woff");
+}
+
+@font-face
+{
+	font-family: Places;
+	src: url("font1.woff");
+	font-weight: light;
+}
+
+@font-face
+{
+	font-family: Title;
+	src: url("font3.woff");
+}
+
+.headername
+{
+	font-family: Title;
+	color: WHITE;
+	font-size: 40px;
+	display: inline-block;
+	margin-left: 2px;
+	position: relative;
+	top: -40px;
+}
+
+.header
+{
+	background-color: #003366;
+	padding-bottom: -10px;
+}
+header
+{
+	padding-bottom: 10px;
+	box-shadow: 0px 0px 30px black;
+	background-color: white;
+}
+body header div div span img
+{
+	padding: 5px;
+}
+
+body header nav
+{
+	font-family: Font;
+	font-size: 20px;
+	padding-top: 5px;
+	padding-bottom: 25px;
+}
+body header nav span a
+{
+	text-decoration: none;
+	color: black;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 9px;
+}
+.dropdwn
+{
+	position: relative;
+    display: inline-block;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 142px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.8);
+    margin-top: 8px;
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: gray;}
+
+.dropdwn:hover .dropdown-content {
+    display: block;
+}
+
+
+
+body header nav span a:hover
+{
+	-webkit-transition: background-color 1s;
+    background-color: #003366;
+    color: white;
+}
+
+.nav-left
+{
+	float: left;
+}
+
+.nav-right
+{
+	float: right;
+	padding-right: 10px;
+}
+
+.content
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border:hidden;
+	width: 1200px;
+	background-color: rgba(153,153,255,0.9);
+}
+
+.welcome
+{
+	font-family: Font;
+	font-size: 70px;
+	text-align: center;
+}
+
+footer
+{
+	font-family: Font;
+	font-size: 15px;
+	color: white;
+	background-color: #000033;
+	padding: 30px;
+}
+
+footer div span a
+{
+	text-decoration: none;
+	color: white;
+}
+
+footer div
+{
+	float: right;
+}
+
+.pg_titles
+{
+	border: hidden;
+	background-color: #003366;
+	color: white;
+	width: 94%;
+	font-family: Font;
+	font-size: 40px;
+	padding: 10px;
+}
+
+/*------------------------------For Events Page-------------------------------------*/
+
+.placestab
+{
+	margin-top: 20px;
+	width: 95%;
+	height: 80px;	
+}
+

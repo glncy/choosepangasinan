@@ -1,0 +1,136 @@
+/*---------------------------------------GENERAL-----------------------------------*/
+*
+{
+	margin: 0;
+}
+
+body
+{
+	background-color: #FFFF10;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/*webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);*/
+}
+@font-face
+{
+	font-family: Font;
+	src: url("font2.woff");
+}
+
+@font-face
+{
+	font-family: Places;
+	src: url("font1.woff");
+	font-weight: light;
+}
+
+@font-face
+{
+	font-family: Title;
+	src: url("font3.woff");
+}
+
+
+.headername
+{
+	font-family: Title;
+	font-size: 20px;
+	position: relative;
+	top: 5	px;
+	display: inline-block;
+
+}
+
+.headerlogo
+{
+	padding: 5px;
+	display: inline-block;
+}
+
+.header
+{
+	background-color: rgba(255,255,255,0.8);
+	padding: 10px;
+}
+
+/*************TITLE STYLE********************/
+
+.c{color: #006699;}
+.h{color: #ffcc33;}
+.o{color: #339966;}
+.o_2{color: #ff6666;}
+.s{color: #666699;}
+.e{color: #339966;}
+.p{color: #ff6666;}
+.a{color: #ffcc33;}
+.n{color: #666699;}
+.g{color: #006699;}
+.a_2{color: #339966;}
+.s_2{color: #006699;}
+.i{color: #ffcc33;}
+.n_2{color: #006699;}
+.a_3{color: #339966;}
+.n_3{color: #ff6666;}
+.ex{color: #666699;}
+
+/***********************************************/
+
+.nav li
+{
+	float: left;
+}
+
+nav
+{
+	background-color: rgba(0,51,102,0.8);
+	font-family: Font;
+	font-size: 15px;
+	position: relative;
+}
+
+li a
+{
+	color: White;
+}
+
+li a:hover
+{
+	transition: background-color 0.5s;
+}
+
+.date
+{
+	float: right;
+}
+	
+.footer
+{
+	padding:20px;
+	text-align: right;
+	font-family: Font;
+	color: White;
+	background-color: rgba(0,51,102,0.9);
+}
+
+.footer a
+{
+	color: white;
+	text-decoration: none;
+}
+
+.footer a:hover
+{
+	background-color: white;
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.container
+{
+	font-family: Font;
+}

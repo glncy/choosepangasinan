@@ -1,0 +1,270 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 18, 2016 at 09:53 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.5.38
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `dbcp`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `user` varchar(50) NOT NULL,
+  `pw` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `user`, `pw`) VALUES
+(1, 'admin', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` int(255) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `address` varchar(500) NOT NULL,
+  `com_rev` varchar(5000) NOT NULL,
+  `place` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `name`, `email`, `address`, `com_rev`, `place`) VALUES
+(1, 'Glency Tirao', 'darko05.gt@gmail.com', '', 'I love the View of Hundred Islands! So Relaxing and realizing the art of our God.', 'Alaminos'),
+(2, 'Daniel Raposas', 'danielraposas@gmail.com', '', 'The Beach is so Great. This is the Place I will not forget!', 'Alaminos'),
+(13, 'Glency Tirao', 'darko05.gt@gmail.com', '', 'Very Attractive!', 'Alaminos'),
+(15, 'Glency Tirao', 'darko05.gt@gmail.com', 'Dagupan City', 'So great!', 'Sison'),
+(16, 'Anabelle Dela Rama', 'darko05.gt@gmail.com', '', 'Relaxing!', 'Sison'),
+(17, 'Glency Tirao', 'darko05.gt@gmail.com', 'Dagupan City', 'Great place to relax and Have fun!', 'Lingayen');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(255) NOT NULL,
+  `event` varchar(100) NOT NULL,
+  `details` varchar(50) NOT NULL,
+  `month` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(255) NOT NULL,
+  `filename1` varchar(500) NOT NULL,
+  `filename2` varchar(100) NOT NULL,
+  `filename3` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `filename1`, `filename2`, `filename3`, `name`) VALUES
+(11, '1_2.png', '2_2.png', '3_2.png', 'Antong Falls'),
+(12, '1.png', '2.png', '3.png', 'Hundred Islands');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `places`
+--
+
+CREATE TABLE `places` (
+  `id` int(255) NOT NULL,
+  `placename` varchar(50) NOT NULL,
+  `placethumb` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `places`
+--
+
+INSERT INTO `places` (`id`, `placename`, `placethumb`) VALUES
+(12, 'Alaminos', 'alaminos.png'),
+(13, 'Bolinao', 'bolinao.png'),
+(14, 'Lingayen', 'lingayen_thumbnail.png'),
+(15, 'Sison', 'sison.png'),
+(16, 'Anda', 'andathumb.png'),
+(17, 'Burgos', 'burgos.png'),
+(19, 'Labrador', 'labradorthumb.png'),
+(20, 'Dasol', 'dasol.png'),
+(21, 'Mangaldan', 'mangaldan.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spots`
+--
+
+CREATE TABLE `spots` (
+  `id` int(255) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `des` varchar(5000) NOT NULL,
+  `place` varchar(50) NOT NULL,
+  `type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `spots`
+--
+
+INSERT INTO `spots` (`id`, `name`, `des`, `place`, `type`) VALUES
+(7, 'Antong Falls', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', 'Sison', 'Falls'),
+(8, 'Hundred Islands', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', 'Alaminos', 'Beaches');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblplaces`
+--
+
+CREATE TABLE `tblplaces` (
+  `id` int(255) NOT NULL,
+  `cover` varchar(50) NOT NULL,
+  `placename` varchar(50) NOT NULL,
+  `des` varchar(5000) NOT NULL,
+  `maps` varchar(50) NOT NULL,
+  `aw` varchar(2000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblplaces`
+--
+
+INSERT INTO `tblplaces` (`id`, `cover`, `placename`, `des`, `maps`, `aw`) VALUES
+(15, 'alaminos.png', 'Alaminos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(16, 'bolinao.png', 'Bolinao', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(17, 'lingayen_cover.png', 'Lingayen', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(18, 'sison.png', 'Sison', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(19, 'andacover.png', 'Anda', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(20, 'burgoscover.png', 'Burgos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(22, 'labradorcover.png', 'Labrador', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(23, 'dasol.png', 'Dasol', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>'),
+(24, 'mangaldan.png', 'Mangaldan', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lorem non massa malesuada rutrum. Cras mattis luctus eros. Integer dapibus cursus nisi, quis fringilla ex ullamcorper vitae. Nam dictum eleifend dapibus. Vestibulum sollicitudin, tortor eget facilisis porttitor, tortor augue volutpat sem, sit amet egestas dui est viverra diam. Aenean laoreet ligula a elit lacinia, in faucibus nulla dignissim. Donec sollicitudin magna quam, sed aliquet velit condimentum vel. Pellentesque dignissim, metus eget egestas suscipit, purus elit accumsan nisi, ac finibus lacus est hendrerit dolor. Ut et efficitur velit. Vivamus maximus rutrum dolor a aliquam. Sed efficitur dui a velit tincidunt elementum. Nam tincidunt sodales nulla, non tincidunt lacus lobortis non. Duis consequat eget nulla ut semper. Proin ut ullamcorper est. Suspendisse nec ante porttitor, varius nunc at, suscipit velit.', '16.168322,120.538608', '<a href="http://www.accuweather.com/en/ph/sison/265396/weather-forecast/265396" class="aw-widget-legal">\r\n		<!--\r\n		By accessing and/or using this code snippet, you agree to AccuWeatherï¿½s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeatherï¿½s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.\r\n		-->\r\n		</a><div id="awcc1475405919297" class="aw-widget-current"  data-locationkey="265396" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475405919297"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `places`
+--
+ALTER TABLE `places`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `spots`
+--
+ALTER TABLE `spots`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblplaces`
+--
+ALTER TABLE `tblplaces`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `places`
+--
+ALTER TABLE `places`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT for table `spots`
+--
+ALTER TABLE `spots`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `tblplaces`
+--
+ALTER TABLE `tblplaces`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
